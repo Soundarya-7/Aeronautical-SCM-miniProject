@@ -1,0 +1,36 @@
+
+<div class="body">
+
+    <div class="title">
+        Delete Supplier details
+    </div>
+
+
+    <div class="input-id">
+        <label>Enter Supplier ID to delete&nbsp;</label>
+        <input type="number" name="id" [(ngModel)]="id">
+        <button class="findbutton" (click)="findSupplier()"> find</button>
+    </div>
+    <div class="input">
+        <label>Supplier Name </label>
+        <input type="text" name="name" class="form-control mb-2"  disabled value="{{supplier.name}}"  required><br>
+    </div>
+
+    <div class="input">
+        <label> Supplier address</label>
+        <input type="email" name="email" class="form-control" disabled value="{{supplier.address}}" required><br>
+    </div>
+
+
+    <div class="input">
+        <label> Supplier phone number</label>
+        <input type="number" name="number" class="form-control" disabled value="{{supplier.phoneNumber}}" required><br>
+    </div>
+
+    <div class="button">
+        <button (click)="submit()">Delete</button>
+    </div>
+
+
+
+</div>

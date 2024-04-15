@@ -1,0 +1,32 @@
+.styled-table {
+    border-collapse: collapse;
+    margin: 40px auto;
+    width: 75%;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-header{
+    border-radius: 2rem;
+    background-color: #5b6b9e;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+
+
+
+  

@@ -1,0 +1,28 @@
+
+<div class="table-container">
+
+    <table  class="styled-table">
+
+        <tr class="table-header">
+            <th>S.no</th>
+            <th>Order ID</th>
+            <th>Part ID</th>
+            <th>Part name</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>Supplier ID</th>
+        </tr>
+
+
+        <tr *ngFor = " let o of orders; let i = index" class="active-row">
+            <td>{{i+1}}</td>
+            <td>{{o.id}}</td>
+            <td>{{o.parts.id}}</td>
+            <td>{{o.parts.name}}</td>
+            <td>{{o.quantity}}</td>
+            <td>{{o.orderDate | date}}</td>
+            <td>{{o.suppliers.id}}</td>
+        </tr>
+    </table>
+   
+</div>

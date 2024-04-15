@@ -1,0 +1,24 @@
+
+<div class="table-container">
+
+    <table  class="styled-table">
+
+        <tr class="table-header">
+            <th>S.no</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+        </tr>
+
+
+        <tr *ngFor = " let s of supplier; let i = index" class="active-row">
+            <td>{{i+1}}</td>
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.address}}</td>
+            <td>{{s.phoneNumber}}</td>
+        </tr>
+    </table>
+   
+</div>

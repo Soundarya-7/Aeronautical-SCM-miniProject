@@ -1,0 +1,52 @@
+
+
+    <div class="body">
+
+        <div class="title">
+            Enter Supplier Details
+        </div>
+
+    <form #form="ngForm" (ngSubmit)="submit(form)">
+  
+        <div class="input">
+            <label>Supplier Name </label>
+            <input type="text" name="name" class="form-control" ngModel required>
+            <span *ngIf="form.controls && form.controls['name'] && (form.controls['name'].touched  || form.submitted) && form.controls['name'].invalid "
+            style="color: red;"><small> name is required </small> </span>
+            <br>
+        </div>
+
+        <div class="input">
+            <label> Supplier address</label>
+            <input type="email" name="address" class="form-control" ngModel required>
+            <span *ngIf="form.controls && form.controls['address'] && (form.controls['address'].touched  || form.submitted) && form.controls['address'].invalid"
+            style="color: red;"><small> address is required </small> </span>
+            <br>
+            
+        </div>
+
+
+        <div class="input">
+            <label> Supplier phone number</label>
+            <input type="number" name="phoneNumber" class="form-control" #phone = "ngModel" ngModel  pattern="[0-9]{10}" required> 
+            <!-- <span *ngIf="form.controls && form.controls['phoneNumber'] && (form.controls['phoneNumber'].touched  || form.submitted) && form.controls['phoneNumber'].invalid"
+            style="color: red;"><small> phone number is required </small> </span> -->
+            <span *ngIf="phone.invalid && (phone.touched || form.submitted) && phone.hasError('required')" style="color: red;"> <small> MobileNumber is required </small>
+            </span>
+            <span *ngIf="phone.hasError('pattern')" style="color: red;"> <small> Please enter a valid mobile number </small>
+             </span>
+            <br>
+
+            
+           
+        </div>
+
+        <div class="button">
+            <button type="submit" >Submit</button>
+        </div>
+
+    </form>
+
+    </div>
+
+

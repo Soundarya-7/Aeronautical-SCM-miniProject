@@ -1,0 +1,14 @@
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+ color:#fff;
+ background-color: #8a9197;
+}
+
+.nav-pills .nav-link {
+    border-radius:.25rem;
+    color: black;
+   }
+   
+.activelink{
+    background-color: grey;
+}

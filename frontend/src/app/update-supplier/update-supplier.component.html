@@ -1,0 +1,36 @@
+
+<div class="body">
+
+    <div class="title">
+        Update Supplier details
+    </div>
+
+
+    <div class="input-id">
+        <label>Enter Supplier ID to update&nbsp;</label>
+        <input type="number" name="id" [(ngModel)]= "id">
+        <button class="findbutton" (click)="findSupplier()"> find</button>
+    </div>
+    <div class="input">
+        <label>Supplier Name </label>
+        <input type="text" name="name" class="form-control mb-2"  [(ngModel)]="supplier.name"  required><br>
+    </div>
+
+    <div class="input">
+        <label> Supplier address</label>
+        <input type="email" name="email" class="form-control" [(ngModel)]="supplier.address" required><br>
+    </div>
+
+
+    <div class="input">
+        <label> Supplier phone number</label>
+        <input type="number" name="number" class="form-control" [(ngModel)]="supplier.phoneNumber" required><br>
+    </div>
+
+    <div class="button">
+        <button (click)="submit()">Save</button>
+    </div>
+
+
+
+</div>
